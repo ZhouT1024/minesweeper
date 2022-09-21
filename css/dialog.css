@@ -1,0 +1,132 @@
+#dialog-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+/* 弹窗 */
+#dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 500px;
+  background-color: #fff;
+}
+
+/* 弹窗标题栏 */
+#dialog-top {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+/* 标题 */
+#dialog-top .title {
+  display: inline-block;
+  flex: 1;
+}
+
+/* 关闭按钮 */
+#dialog-top .btn.close {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+#dialog-top .btn.close {
+  background-image: url('/image/close.png');
+}
+#dialog-top .btn.close:hover {
+  background-image: url('/image/close_hover.png');
+  background-color: #f00;
+}
+
+/* 弹窗主体 */
+#dialog-content {
+  padding: 2rem;
+  flex: 1;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+/* 表单项 */
+#dialog-content .form-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  height: 3rem;
+}
+
+/* 输入框标题 */
+#dialog-content label {
+  display: inline-block;
+  height: 100%;
+  width: 20%;
+  line-height: 3rem;
+}
+
+/* 输入框 */
+#dialog-content input {
+  border: 1px solid #afabab;
+  height: calc(100% - 10px);
+  width: 70%;
+  line-height: 2rem;
+  outline: none;
+}
+
+/* 按钮 */
+#dialog-btns {
+  /* height: 2.5rem; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+#dialog-btns .btn {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#dialog-btns .btn:first-child {
+  background-color: white;
+  color: black;
+  border: 2px solid transparent;
+}
+
+#dialog-btns .btn:hover {
+  background-color: #008cba;
+  color: white;
+}
+
+#dialog-btns .btn:last-child {
+  background-color: white;
+  color: black;
+  border: 2px solid transparent;
+}
+
+#dialog-btns .btn:last-child:hover {
+  background-color: #f00;
+  color: white;
+}

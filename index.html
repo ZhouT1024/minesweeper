@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>扫雷网页版</title>
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/dialog.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div id="minesweeper-box">
+      <div id="control">
+        <div>
+          <!-- 剩余地雷 -->
+          <div id="mine-counter">
+            <label>地雷：</label>
+            <input type="text" value="10" readonly />
+          </div>
+          <!-- 重置按钮 -->
+          <button id="reset"></button>
+          <!-- 游戏时间 -->
+          <div id="game-time">
+            <label>时间：</label>
+            <input type="text" value="0" readonly />
+          </div>
+        </div>
+
+        <!-- 游戏难度 -->
+        <div id="game-level">
+          <label> 难度： </label>
+          <select name="level" class="level">
+            <option value="elementary" selected>初级(9*9)</option>
+            <option value="intermediate">中级(16*16)</option>
+            <option value="advanced">高级(16*30)</option>
+            <option value="customize">自定义</option>
+          </select>
+        </div>
+      </div>
+      <div id="field">
+        <table>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="dialog-mask">
+      <div id="dialog">
+        <div id="dialog-top">
+          <h5 class="title">自定义难度</h5>
+          <a class="btn close"></a>
+        </div>
+        <div id="dialog-content">
+          <!-- 宽，高，地雷 -->
+          <form action="#">
+            <div class="form-item">
+              <label>宽：</label>
+              <input
+                class="width input"
+                type="number"
+                name="width"
+                max="30"
+                min="0" />
+            </div>
+            <div class="form-item">
+              <label>高：</label>
+              <input
+                class="height input"
+                type="number"
+                name="height"
+                max="24"
+                min="0" />
+            </div>
+            <div class="form-item">
+              <label>地雷：</label>
+              <input class="mine input" type="number" name="mine" />
+            </div>
+          </form>
+        </div>
+        <div id="dialog-btns">
+          <button class="btn confirm">确认</button>
+          <button class="btn cancel">取消</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/dialog.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+  </body>
+</html>
