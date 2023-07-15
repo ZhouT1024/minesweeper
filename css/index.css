@@ -55,13 +55,13 @@ body {
   border: 1px solid #d3d3d3;
   height: 30px;
   width: 30px;
-  background-image: url('/image/emoji-.png');
+  background-image: url('../image/emoji-.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #minesweeper-box.fail #reset {
-  background-image: url('/image/emoji-_1.png');
+  background-image: url('../image/emoji-_1.png');
 }
 #reset:active {
   border: 1px inset #d3d3d3;
@@ -120,26 +120,26 @@ body {
 
 /* 标记的地雷 */
 .square.marked {
-  background-image: url('/image/mark.png');
+  background-image: url('../image/mark.png');
 }
 
 .fail .square.mine {
-  background-image: url('/image/boom.png');
+  background-image: url('../image/boom.png');
 }
 /* 标记错误的 */
 .fail .square.marked {
-  background-image: url('/image/mark.png');
+  background-image: url('../image/mark.png');
   background-color: #f00;
 }
 
 /* 标记正确的 */
 .fail .square.marked.mine {
-  background-image: url('/image/mark.png');
+  background-image: url('../image/mark.png');
   background-color: #c1c1b8;
 }
 
 /* 踩的雷 */
 .fail .square.mine.stepon {
-  background-image: url('/image/boom.png');
+  background-image: url('../image/boom.png');
   background-color: #f00 !important;
 }

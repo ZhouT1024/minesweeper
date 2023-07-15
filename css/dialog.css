@@ -46,10 +46,10 @@
   background-repeat: no-repeat;
 }
 #dialog-top .btn.close {
-  background-image: url('/image/close.png');
+  background-image: url('../image/close.png');
 }
 #dialog-top .btn.close:hover {
-  background-image: url('/image/close_hover.png');
+  background-image: url('../image/close_hover.png');
   background-color: #f00;
 }
 
